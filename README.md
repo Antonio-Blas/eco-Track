@@ -1,4 +1,5 @@
-EcoHabits
+EcoHabits:
+
 Una aplicación web desarrollada con Angular para promover hábitos ecológicos sostenibles. Permite a los usuarios registrar actividades ecológicas, rastrear su progreso, acceder a consejos y retos, interactuar en una comunidad y gestionar su perfil. La app utiliza almacenamiento local (localStorage) para persistir datos, lo que la hace ideal para un prototipo o uso personal sin backend.
 Descripción
 EcoHabits es una aplicación standalone de Angular que fomenta prácticas ecológicas en categorías como transporte, energía, reciclaje y consumo responsable. Las características principales incluyen:
