@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { ActivitiesRoutingModule } from './activities-routing.module';
 
 // Importamos los standalone correctamente
@@ -10,7 +10,6 @@ import { ActivityListComponent } from './components/activities-list/activity-lis
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     ActivitiesRoutingModule,
     ActivityFormComponent,
     ActivityListComponent

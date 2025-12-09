@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ActivityListComponent } from './components/activities-list/activity-list';
-import { ActivityFormComponent } from './components/activity-form/activity-form';
-import { ActivityDetailComponent } from './components/activity-detail/activity-detail';
-
 const routes: Routes = [
-  { path: '', component: ActivityListComponent },
-  { path: 'new', component: ActivityFormComponent },
-  { path: ':id', component: ActivityDetailComponent }
+  { 
+    path: '',
+    loadComponent: () => import('./components/activities-list/activity-list')
+      .then(m => m.ActivityListComponent)
+  },
+  { 
+    path: 'new',
+    loadComponent: () => import('./components/activity-form/activity-form')
+      .then(m => m.ActivityFormComponent)
+  },
+  { 
+    path: ':id',
+    loadComponent: () => import('./components/activity-detail/activity-detail')
+      .then(m => m.ActivityDetailComponent)
+  }
 ];
 
 @NgModule({
