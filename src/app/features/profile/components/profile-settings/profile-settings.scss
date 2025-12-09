@@ -1,0 +1,44 @@
+.settings-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+
+  h2 { margin-top: 0; }
+
+  label { display:block; margin-top:10px; font-size:13px; color:#444; }
+  input {
+    width:100%;
+    padding:8px 10px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    margin-top:6px;
+  }
+
+  .buttons {
+    display:flex;
+    gap:10px;
+    margin-top:14px;
+    align-items:center;
+
+    button {
+      padding:8px 12px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      background:#1976d2;
+      color:white;
+    }
+
+    .muted { background:#f0f0f0; color:#333; }
+    .danger { background:#e53935; color:white; }
+
+    .link-back {
+      margin-left:auto;
+      text-decoration:none;
+      color:#1976d2;
+    }
+  }
+}

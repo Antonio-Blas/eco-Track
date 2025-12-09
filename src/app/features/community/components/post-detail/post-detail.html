@@ -1,0 +1,20 @@
+<div *ngIf="post; else noPost">
+
+  <h2>{{ post.author }}</h2>
+  <p>{{ post.content }}</p>
+
+  <small>{{ post.date | date:'short' }}</small>
+
+  <h3>Comentarios</h3>
+
+  <div class="comment" *ngFor="let c of post.comments">
+    {{ c }}
+  </div>
+
+  <textarea [(ngModel)]="comment" placeholder="Escribe un comentario..."></textarea>
+  <button (click)="sendComment()">Enviar</button>
+</div>
+
+<ng-template #noPost>
+  <p>Publicación no encontrada.</p>
+</ng-template>

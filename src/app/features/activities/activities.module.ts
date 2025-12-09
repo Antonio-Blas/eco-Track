@@ -3,21 +3,17 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActivitiesRoutingModule } from './activities-routing.module';
 
-// IMPORTAMOS los componentes standalone
-import { ActivitiesListComponent } from './components/activities-list/activity-list';
+// Importamos los standalone correctamente
 import { ActivityFormComponent } from './components/activity-form/activity-form';
+import { ActivityListComponent } from './components/activities-list/activity-list';
 
 @NgModule({
-  // ❌ NO declarar standalone components aquí
-  // declarations: [],
-
-  // ✅ Importarlos directamente
   imports: [
     CommonModule,
     ReactiveFormsModule,
     ActivitiesRoutingModule,
-    ActivitiesListComponent,
-    ActivityFormComponent
+    ActivityFormComponent,
+    ActivityListComponent
   ]
 })
 export class ActivitiesModule {}

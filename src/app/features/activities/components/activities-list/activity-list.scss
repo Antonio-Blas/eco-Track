@@ -1,19 +1,59 @@
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-li {
-  background: #e8f5e9;
-  padding: 10px;
-  margin-bottom: 8px;
+.new-btn {
+  display: inline-block;
+  margin-bottom: 12px;
+  background: #1976d2;
+  color: white;
+  padding: 8px 14px;
   border-radius: 6px;
+  text-decoration: none;
 }
-li:hover {
-  background: #c8e6c9;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  background: white;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info {
+  cursor: pointer;
+}
+
+.points {
+  color: green;
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.editing-block {
+  margin-top: 10px;
+}
+
+.edit {
+  background: #ffc107;
+}
+
+.delete {
+  background: #e53935;
+  color: white;
+}
+
+.save {
+  background: #4caf50;
+  color: white;
+}
+.cancel {
+  background: #9e9e9e;
+  color: white;
 }

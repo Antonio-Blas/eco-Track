@@ -1,0 +1,18 @@
+<div class="detail-card" *ngIf="activity">
+  <h2>{{ activity.type }}</h2>
+
+  <p class="description">{{ activity.description }}</p>
+
+  <p class="points">
+    <strong>Puntos:</strong> {{ activity.points }}
+  </p>
+
+  <p class="date">
+    <strong>Fecha:</strong> {{ activity.date | date:'medium' }}
+  </p>
+
+  <a [routerLink]="['/activities']" class="back-btn">← Volver</a>
+</div>
+<div *ngIf="!activity">
+  <p>Actividad no encontrada.</p>
+  <a [routerLink]="['/activities']" class="back-btn">← Volver</a>

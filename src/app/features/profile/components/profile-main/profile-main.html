@@ -1,0 +1,26 @@
+<div class="profile-card">
+  <div class="header">
+    <img [src]="user.avatarUrl || 'https://i.pravatar.cc/120?img=12'" alt="avatar" class="avatar">
+    <div class="info">
+      <h2>{{ user.name }}</h2>
+      <p class="email" *ngIf="user.email">{{ user.email }}</p>
+      <a routerLink="settings" class="btn">Ajustes</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="num">{{ user.ecoPoints || 0 }}</div>
+      <div class="label">Puntos</div>
+    </div>
+    <div class="stat">
+      <div class="num">{{ user.dailyGoal || 0 }}</div>
+      <div class="label">Meta diaria</div>
+    </div>
+  </div>
+
+  <div class="actions-row">
+    <a routerLink="/activities" class="link-btn">Mis actividades</a>
+    <a routerLink="/progress" class="link-btn">Mi progreso</a>
+  </div>
+</div>

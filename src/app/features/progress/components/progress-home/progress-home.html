@@ -1,0 +1,28 @@
+<h2>Tu progreso</h2>
+
+<div class="card">
+
+  <div class="level-box">
+    <h3>Nivel {{ level }}</h3>
+    <p>{{ totalPoints }} / {{ nextLevelPoints }} puntos</p>
+
+    <div class="bar">
+      <div class="fill" [style.width.%]="progressPercent()"></div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Logros</h3>
+
+<div class="badges">
+  <app-progress-badge text="Primer paso" [active]="totalPoints >= 10"></app-progress-badge>
+  <app-progress-badge text="Eco intermedio" [active]="totalPoints >= 50"></app-progress-badge>
+  <app-progress-badge text="Eco master" [active]="totalPoints >= 120"></app-progress-badge>
+</div>
+
+<h3>Resumen actividades</h3>
+
+<div class="summary">
+  Has completado <strong>{{ activitiesCount }}</strong> actividades.
+</div>

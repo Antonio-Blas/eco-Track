@@ -1,0 +1,22 @@
+<div class="settings-card">
+  <h2>Ajustes de Perfil</h2>
+
+  <label>Nombre</label>
+  <input [(ngModel)]="user.name" type="text">
+
+  <label>Email</label>
+  <input [(ngModel)]="user.email" type="email">
+
+  <label>Avatar URL</label>
+  <input [(ngModel)]="user.avatarUrl" type="text" placeholder="https://...">
+
+  <label>Meta diaria (puntos)</label>
+  <input type="number" [(ngModel)]="user.dailyGoal">
+
+  <div class="buttons">
+    <button (click)="save()">Guardar</button>
+    <button class="muted" (click)="resetProgress()">Restablecer progreso</button>
+    <button class="danger" (click)="clearAccount()">Borrar cuenta</button>
+    <a routerLink="/profile" class="link-back">Volver</a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<h2>Comunidad</h2>
+
+<div class="create-box">
+  <textarea [(ngModel)]="newPost" placeholder="Comparte algo..."></textarea>
+  <button (click)="publish()">Publicar</button>
+</div>
+
+<div class="post" *ngFor="let p of posts">
+  <h3>{{ p.author }}</h3>
+  <p>{{ p.content }}</p>
+  <small>{{ p.date | date:'short' }}</small>
+
+  <div class="actions">
+    <button (click)="like(p.id)">👍 {{ p.likes }}</button>
+    <a [routerLink]="['/community', p.id]">Ver detalles</a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.badge {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.badge.active {
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+.badge.inactive {
+  background: #bbb;
+  color: #666;
+}
