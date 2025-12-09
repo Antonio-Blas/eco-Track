@@ -1,0 +1,9 @@
+<h2>Mis Actividades Ecológicas</h2>
+
+<ul>
+  <li *ngFor="let activity of activities">
+    <strong>{{ activity.type }}</strong> - {{ activity.value }}  
+    <span>(+{{ activity.points }} pts)</span>
+  </li>
+</ul>
+<p *ngIf="activities.length === 0">No has registrado actividades ecológicas aún. ¡Comienza a sumar puntos!</p>

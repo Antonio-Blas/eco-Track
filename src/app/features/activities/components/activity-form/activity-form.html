@@ -1,0 +1,30 @@
+<h2>Registrar Actividad Ecológica</h2>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+
+  <label>Tipo de actividad:</label>
+  <select formControlName="type">
+    <option value="">Selecciona una opción</option>
+    <option value="Transporte">Transporte</option>
+    <option value="Energía">Energía</option>
+    <option value="Reciclaje">Reciclaje</option>
+    <option value="Consumo">Consumo Responsable</option>
+  </select>
+  <div *ngIf="form.controls['type'].invalid && form.controls['type'].touched" class="error">
+    Elige un tipo de actividad.
+  </div>
+
+  <label>Descripción:</label>
+  <input type="text" formControlName="description" placeholder="Ej: Fui caminando al trabajo">
+  <div *ngIf="form.controls['description'].invalid && form.controls['description'].touched" class="error">
+    La descripción es obligatoria y debe tener al menos 3 caracteres.
+  </div>
+
+  <label>Puntos:</label>
+  <input type="number" formControlName="points" min="1">
+  <div *ngIf="form.controls['points'].invalid && form.controls['points'].touched" class="error">
+    Los puntos deben ser mayores a 0.
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Guardar</button>
+</form>

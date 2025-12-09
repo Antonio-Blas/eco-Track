@@ -1,0 +1,20 @@
+// Estilos sencillos para la barra superior y contenedor
+.topbar {
+  display:flex;
+  justify-content:center;
+  gap:0.75rem;
+  padding:0.75rem;
+  background:#1e293b;
+}
+.topbar button {
+  background:#0ea5a3;
+  color:white;
+  border:none;
+  padding:0.5rem 0.9rem;
+  border-radius:8px;
+  cursor:pointer;
+  transition:transform .12s;
+}
+.topbar button:hover { transform:translateY(-2px); }
+.container { padding:1rem; max-width:980px; margin:0 auto; }
+/* Estilos globales */
