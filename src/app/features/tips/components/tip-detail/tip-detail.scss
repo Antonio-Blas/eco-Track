@@ -1,0 +1,16 @@
+.detail-card {
+  background:white;
+  padding:16px;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+
+  .head { display:flex; justify-content:space-between; align-items:center; }
+  .category { color:#777; font-size:13px; }
+  .text { margin:10px 0; font-size:15px; line-height:1.4; }
+  .date { color:#999; font-size:12px; }
+  .actions { display:flex; gap:10px; margin-top:12px; }
+  .del { background:#e53935; color:white; border:none; padding:8px 12px; border-radius:8px; }
+  .btn { text-decoration:none; padding:8px 12px; border-radius:8px; background:#f1f1f1; color:#333; }
+  .fav { background:transparent; border:none; font-size:20px; cursor:pointer; }
+}
+.favorite { color: #ff9800; }

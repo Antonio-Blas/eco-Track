@@ -1,0 +1,12 @@
+<h2>Favoritos</h2>
+
+<div class="grid">
+  <div class="card" *ngFor="let t of favs">
+    <h3>{{ t.title }}</h3>
+    <p>{{ t.text }}</p>
+    <div class="actions">
+      <button (click)="toggle(t.id)">{{ t.favorite ? '★' : '☆' }}</button>
+      <a [routerLink]="['/tips', t.id]">Ver</a>
+    </div>
+  </div>
+</div>

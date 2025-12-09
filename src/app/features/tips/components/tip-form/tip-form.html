@@ -1,0 +1,19 @@
+<h2>Añadir Consejo</h2>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+  <label>Título</label>
+  <input formControlName="title" placeholder="Título del consejo">
+
+  <label>Texto</label>
+  <textarea formControlName="text" rows="4"></textarea>
+
+  <label>Categoría</label>
+  <select formControlName="category">
+    <option value="transport">Transporte</option>
+    <option value="energy">Energía</option>
+    <option value="recycling">Reciclaje</option>
+    <option value="general">General</option>
+  </select>
+
+  <button type="submit" [disabled]="form.invalid">Agregar</button>
+</form>

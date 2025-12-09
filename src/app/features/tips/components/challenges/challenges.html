@@ -1,0 +1,19 @@
+<h2>Retos</h2>
+
+<div class="ch-list">
+  <div class="ch" *ngFor="let c of challenges">
+    <h3>{{ c.title }}</h3>
+    <p class="desc">{{ c.description }}</p>
+
+    <div class="bar">
+      <div class="fill" [style.width.%]="(c.progress / c.target) * 100"></div>
+    </div>
+
+    <div class="numbers">{{ c.progress }} / {{ c.target }}</div>
+
+    <div class="c-actions">
+      <button (click)="addProgress(c.id)">Progreso +1</button>
+      <button class="muted" (click)="reset(c.id)">Reset</button>
+    </div>
+  </div>
+</div>

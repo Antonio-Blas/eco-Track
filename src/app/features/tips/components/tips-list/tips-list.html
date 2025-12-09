@@ -1,0 +1,39 @@
+<div class="tips-header">
+  <h2>Consejos</h2>
+  <div class="controls">
+    <input [(ngModel)]="query" placeholder="Buscar consejos..." (input)="onSearch()">
+    <select [(ngModel)]="selectedCategory" (change)="changeCategory(selectedCategory)">
+      <option value="">Todas</option>
+      <option value="transport">Transporte</option>
+      <option value="energy">Energía</option>
+      <option value="recycling">Reciclaje</option>
+      <option value="general">General</option>
+    </select>
+    <a routerLink="/tips/new" class="btn-new">+ Añadir</a>
+    <a routerLink="/tips/favorites" class="btn">Favoritos</a>
+    <a routerLink="/tips/challenges" class="btn">Retos</a>
+  </div>
+</div>
+
+<div class="tips-grid">
+  <div class="card" *ngFor="let t of tips">
+    <div class="meta">
+      <span class="cat">{{ t.category | uppercase }}</span>
+      <button class="fav" (click)="toggleFavorite(t.id)">{{ t.favorite ? '★' : '☆' }}</button>
+    </div>
+
+    <h3 class="title">{{ t.title }}</h3>
+    <p class="text">{{ t.text }}</p>
+
+    <div class="card-actions">
+      <a [routerLink]="['/tips', t.id]" class="detail">Ver</a>
+      <button class="del" (click)="svc.deleteTip(t.id); load()">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<div class="pager">
+  <button (click)="prev()" [disabled]="page===1">Anterior</button>
+  <span>Página {{page}} / {{totalPages}}</span>
+  <button (click)="next()" [disabled]="page===totalPages">Siguiente</button>
+</div>

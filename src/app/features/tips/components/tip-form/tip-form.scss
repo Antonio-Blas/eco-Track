@@ -1,0 +1,5 @@
+h2 { margin-bottom:12px; }
+form { display:flex; flex-direction:column; gap:10px; }
+input, textarea, select { padding:8px; border-radius:8px; border:1px solid #ddd; }
+button { padding:10px; border-radius:10px; background:#1976d2; color:white; border:none; cursor:pointer; }
+button:disabled { background:#9e9e9e; cursor:not-allowed; }

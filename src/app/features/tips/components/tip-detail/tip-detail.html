@@ -1,0 +1,21 @@
+<div *ngIf="tip; else notfound">
+  <div class="detail-card">
+    <div class="head">
+      <h2>{{ tip.title }}</h2>
+      <button class="fav" (click)="toggleFav()">{{ tip.favorite ? '★' : '☆' }}</button>
+    </div>
+
+    <p class="category">{{ tip.category | uppercase }}</p>
+    <p class="text">{{ tip.text }}</p>
+    <p class="date">Creado: {{ tip.createdAt | date:'short' }}</p>
+
+    <div class="actions">
+      <a routerLink="/tips" class="btn">Volver</a>
+      <button class="del" (click)="deleteAndClose()">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #notfound>
+  <p>Consejo no encontrado.</p>
+</ng-template>
